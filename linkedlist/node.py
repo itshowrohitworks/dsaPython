@@ -10,6 +10,3 @@ third = Node(3)
 
 first.next = second
 second.next = third
-
-for i in range(5):
-    print(first.next.data - i + 1)
