@@ -36,3 +36,15 @@ mystack.push(6)
 mystack.push(7)
 mystack.push(8)
 mystack.print_stack()
+
+
+# Task: Reverse this string using custom stack:
+mystring = "hello"
+
+a = Stack()
+for i in mystring:
+    a.push(i)
+s = ""    
+while not a.is_empty():
+    s += a.pop()
+print(s)
