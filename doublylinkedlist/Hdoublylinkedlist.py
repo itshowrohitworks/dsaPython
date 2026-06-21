@@ -35,6 +35,8 @@ class DoublyLinkedListHead:
             return
         removed = self.head.data
         self.head = self.head.next
+        if self.head:
+            self.head.prev = None
         return removed
     
     def pop(self):
@@ -46,10 +48,10 @@ class DoublyLinkedListHead:
             self.head = None
             return removed
         curr = self.head
-        while curr.next.next: # type:ignore
+        while curr.next: # type:ignore
             curr = curr.next # type:ignore
-        removed = curr.next.data # type:ignore
-        curr.next = None # type:ignore
+        removed = curr.data # type:ignore
+        curr.prev.next = None # type:ignore
         return removed
     
     def deleteNode(self,node):
@@ -61,6 +63,8 @@ class DoublyLinkedListHead:
         
         if self.head == node:
             self.head = node.next
+            if self.head:
+                self.head.prev = None
 
         if node.next is not None:
             node.next.prev = node.prev
