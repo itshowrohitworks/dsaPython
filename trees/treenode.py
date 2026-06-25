@@ -1,16 +1,16 @@
 from typing import Optional
 
-class TreeNode:
+class BinaryTreeNode:
     def __init__(self,data) -> None:
         self.data = data
-        self.right: Optional[TreeNode] = None
-        self.left: Optional[TreeNode] = None
+        self.right: Optional[BinaryTreeNode] = None
+        self.left: Optional[BinaryTreeNode] = None
 
-root = TreeNode(10)
-b = TreeNode(5)
-c = TreeNode(20)
-d = TreeNode(2)
-e = TreeNode(7)
+root = BinaryTreeNode(10)
+b = BinaryTreeNode(5)
+c = BinaryTreeNode(20)
+d = BinaryTreeNode(2)
+e = BinaryTreeNode(7)
 
 
 root.left = b
